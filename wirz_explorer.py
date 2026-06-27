@@ -1,7 +1,8 @@
 """
-Wirz Concept Explorer
-A semantic database explorer for cross-disciplinary concept understanding.
-Built as the first Python component of the Wirz Engine.
+InterfaSets - Interface for Interex
+A semantic database explorer where users connect concepts into sets
+through causal chains. Built as the first Python component of the Wirz Engine
+and the interface layer for Interex (writer's perspective tool).
 
 AP CSP Post-Exam Project - Track 1: The App Builders
 Requirements met:
@@ -11,7 +12,7 @@ Requirements met:
 """
 
 # =============================================================================
-# WIRZ CONCEPT DATABASE - Sample data for demonstration
+# CONCEPT DATABASE - Sample data for InterfaSets demonstration
 # =============================================================================
 
 CONCEPTS = {
@@ -101,10 +102,10 @@ def print_header(title):
 
 def print_menu():
     """Display the main navigation menu."""
-    print_header("WIRZ CONCEPT EXPLORER")
+    print_header("INTERFASETS")
     print("""
-  Explore how concepts connect across disciplines
-  through causal chains and semantic relationships.
+  Connect concepts into sets through causal chains.
+  The interface for Interex — where stories begin.
 
   [1]  Search for a concept
   [2]  Browse all concepts
@@ -112,7 +113,7 @@ def print_menu():
   [4]  Find path between concepts
   [5]  Add a new concept
   [6]  Compare two concepts
-  [7]  About Wirz
+  [7]  About InterfaSets
   [0]  Exit
 """)
 
@@ -475,24 +476,25 @@ def handle_compare():
 
 
 def show_about():
-    """Display information about Wirz."""
-    print_header("ABOUT WIRZ")
+    """Display information about InterfaSets and the Wirz Engine."""
+    print_header("ABOUT INTERFASETS")
     print("""
-  Wirz Engine is a semantic database for cross-disciplinary
-  understanding of concepts via causal chains.
+  InterfaSets is the interface for Interex — where users connect
+  concepts into sets through causal chains.
 
-  This Concept Explorer is the first Python component,
-  built to demonstrate:
+  Wirz Engine is the semantic database that stores concepts and
+  their relationships across disciplines.
+
+  This application demonstrates:
     - Concept storage and retrieval
     - Causal chain traversal
     - Semantic relationship mapping
     - Cross-domain concept linking
 
-  Future modules: Interex (writer's perspective tool),
-  cognAIz (cognitive typology AI collaboration).
+  Pipeline: Wirz (database) → InterfaSets (interface) →
+            Interex (writer's tool) → cognAIz (AI collaboration)
 
   Built for: AP Computer Science Principles
-  Author: [Your Name]
   Date: June 2026
 """)
 
@@ -507,9 +509,10 @@ def main():
     Sequencing: initialize → display menu → process choice → repeat
     """
     print("\n" + "=" * 60)
-    print("  Welcome to the Wirz Concept Explorer!")
+    print("  Welcome to InterfaSets!")
     print("=" * 60)
     print(f"  Loaded {len(CONCEPTS)} concepts across multiple domains.")
+    print("  Connect concepts. Build sets. Discover chains.")
     print("  Type '0' at any time to return to the menu.")
 
     running = True
@@ -536,7 +539,7 @@ def main():
             show_about()
         elif choice == "0":
             running = False
-            print("\n  Thank you for exploring Wirz. Goodbye!")
+            print("\n  Thank you for exploring InterfaSets. Goodbye!")
             print("=" * 60)
         else:
             print("  Invalid choice. Please enter a number 0-7.")
